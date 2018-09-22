@@ -9,6 +9,7 @@ from calendar import monthrange
 
 
 def water_temp():
+    """Find temp of water."""
     try:
         water_temp = int(input("water temperature: "))
     except ValueError:
@@ -23,6 +24,7 @@ def water_temp():
 
 
 def work_for_pay():
+    """Find amount of pay for work."""
     try:
         hours_worked = int(input("hours worked: "))
         hourly_pay = int(input("pay for an hours work: "))
@@ -39,6 +41,7 @@ def work_for_pay():
 
 
 def exam_mark():
+    """Get grade for marks."""
     def _print(data):
         print(data)
         exit()
@@ -59,6 +62,7 @@ def exam_mark():
 
 
 def month2day():
+    """Find the amount of days in a month."""
     try:
         month_num = int(input("month_num: "))
     except ValueError:
@@ -68,6 +72,7 @@ def month2day():
 
 
 def date2date():
+    """Change the Format of the date."""
     try:
         day = int(input("day: "))
         month = int(input("month: "))
@@ -81,7 +86,9 @@ def date2date():
         print("Wrong date for date")
         start()
 
+
 def start():
+    """Select the desired example."""
     todo = {
             "3.1": "water_temp()",
             "3.2": "work_for_pay()",
@@ -91,7 +98,8 @@ def start():
            }
 
     print("Programs:\n")
-    [print(i) for i in todo]
+    for i in todo:
+        print(i)
     choice = input("Choice: ")
     try:
         eval(todo[choice])
