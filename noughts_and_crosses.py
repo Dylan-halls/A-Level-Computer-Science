@@ -73,6 +73,7 @@ def _checkforwin():
 
 
 def _compturn():
+    # TODO: Check if to o in a row
     if len(points_used) == 0:
         points_used.append(random.choice([1,3,7,9]))
     num = random.randint(1, 10)
